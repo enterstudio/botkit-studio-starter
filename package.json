@@ -6,10 +6,14 @@
   "dependencies": {
     "botkit": "git@github.com:howdyai/botkit.git#talkabot",
     "dashbot": "0.7.4",
-    "wordfilter": "^0.2.6"
+    "wordfilter": "^0.2.6",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {},
-  "scripts": {},
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/howdyai/botkit-studio-starter.git"
@@ -24,5 +28,6 @@
     "slack"
   ],
   "author": "ben@howdy.ai",
-  "license": "ISC"
+  "license": "ISC",
+  "snyk": true
 }
